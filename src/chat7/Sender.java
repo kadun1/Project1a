@@ -33,13 +33,6 @@ public class Sender extends Thread{
 			//클라이언트의 대화명을 서버로 전송한다.
 			out.println(name);
 			//그 이후부터는 q를 입력할때까지의 메세지를 서버로 전송한다.
-			Iterator<String> it = ms.clientMap.keySet().iterator();
-			while(it.hasNext()) {
-				String clientName = it.next();
-				if(name.equals(clientName)) {
-					out.println("테스트");
-				}
-			}
 			while(out != null) {
 				try {
 					String s2 = s.nextLine();
